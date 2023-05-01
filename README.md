@@ -1,0 +1,2 @@
+# Single colored favicons
+

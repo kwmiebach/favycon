@@ -1,0 +1,2 @@
+# echo todo move the project to a venv
+pip3 install -r requirements.txt 

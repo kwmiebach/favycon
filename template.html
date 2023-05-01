@@ -1,0 +1,59 @@
+<html lang="en" data-lt-installed="true"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single colored favicons</title>
+    <style>
+        body {
+            background-color: rgb(46, 46, 46);
+            color: lime;
+        }
+        a {
+          color: lime;
+          text-decoration: none;
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .outer-div {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+</head>
+<body>
+
+
+    <h1>Single colored favicons</h1>
+
+
+    <div
+        id="color-container"
+        style="display: flex; flex-wrap: wrap; overflow: hidden;"
+    >
+    
+        {% for color in colors %}
+
+        <a href="icon/{{ color.color }}.ico" target="_blank">
+            <div
+                class="outer-div"
+            >
+                <div
+                    class="color-box"
+                    style="background-color: {{ color.hex }};"
+                ></div>
+                <p style="text-align: center;">{{ color.color }}</p>
+            </div>
+        </a>
+
+    {% endfor %}
+  
+  </div>  
+
+</body>
+</html>
+
+
